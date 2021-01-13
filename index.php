@@ -1,0 +1,27 @@
+<?php
+session_start();
+include_once('assets/header.php');
+if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+    ?>
+    <p>Bonjour <?= $_SESSION['user']['pseudo'] ?> <a class="btn btn-danger" href="deconnexion.php">Déconnexion</a></p>
+<?php
+}else{
+    ?>
+    <a class="btn btn-primary mr-2" href="connexion.php">Connexion</a> <a class="btn btn-primary" href="inscription.php">Inscription</a>
+<?php
+}
+?>
+<div class="col-12 my-1">
+    <div class="p-2" id="discussion">
+    </div>
+</div>
+<div class="col-12 saisie">
+    <div class="input-group">
+        <input type="text" class="form-control" id="texte" placeholder="Entrez votre message">
+        <div class="input-group-append">
+            <span class="input-group-text" id="valid"><i class="fas fa-check-circle"></i></span>
+        </div>
+    </div>
+</div>
+<?php
+include_once('assets/footer.php');

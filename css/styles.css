@@ -1,0 +1,56 @@
+body{
+	overflow: hidden;
+	background-color: rgba(255,255,255,0.1);
+}
+
+#discussion{
+	height: 78vh;
+	box-shadow: 0 0 5px grey;
+	overflow-y: scroll;
+}
+
+.saisie{
+	height: 20vh;
+}
+
+.darkmode-layer, .darkmode-toggle {
+	z-index: 500;
+  }
+  
+  .darkmode-toggle::after {
+	content: "🌚";
+	}
+  
+  .darkmode--activated  .darkmode-toggle::after {
+	content: "🌝";
+  }
+
+.btn-primary {
+  background-color : yellow;
+  color: black;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: black;
+  color: yellow;
+  transition: all 0.3s ease-in-out;
+}
+
+.darkmode--activated .btn-primary {
+  background-color : white;
+  color: black;
+  border: 1px solid white;
+}
+
+.darkmode--activated .btn-primary:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid white;
+}
+
+.dateMess {
+  font-weight: bold;
+  font-size: 1rem;
+}
